@@ -24,3 +24,77 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+ion-content {
+    --background: rgb(211, 211, 211);
+}
+
+.navTop {
+    position: fixed;  /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0; /* Asegura que la barra se extienda desde el borde izquierdo */
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to right, #1a1e29, #323641, #7b7f8a, #252934); /* Gradiente lineal a lo largo del eje X */
+    border-radius: 0px 0px 30px 30px;
+    z-index: 1000; /* Asegura que la barra esté sobre otros elementos */
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    align-items: center; /* Centra verticalmente el contenido dentro de la navbar */
+    padding-left: 20px; /* Añade algo de padding para no pegar el contenido al borde */
+
+    .userSpace {
+        justify-content: flex-start; /* Alinea el contenido al principio de la navbar */
+        width: 50%;
+        
+    }
+
+    .LogOutSpace {
+        align-items: end;
+        text-align: end;
+        justify-content: end;
+        width: 50%;
+        padding-right: 20px;
+    }
+}
+
+.navBottom {
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea los botones verticalmente */
+    width: 100%; /* Asegúrate de que la nav ocupe el ancho completo */
+    position: fixed; /* Mantiene la nav fija en la parte inferior */
+    bottom: 0; /* Posición al fondo de la página */
+    background-image: linear-gradient(to right, #1a1e29, #323641, #7b7f8a, #252934); /* Gradiente lineal a lo largo del eje X */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Sombra para un efecto elevado */
+    padding: 10px 0; /* Algunos paddings para buena apariencia */
+    border-radius: 30px 30px 0px 0px;
+
+    .active {
+        svg {
+            filter: drop-shadow(0 -2px 5px rgba(255, 255, 255, 0.8));
+        }
+        span {
+            display: block;
+            text-shadow: 0 -2px 5px rgba(255, 255, 255, 0.8); /* Sombra para un efecto elevado */
+        }
+    }
+    
+    button {
+        flex: 1; /* Distribuye el espacio igualmente entre los botones */
+        display: flex;
+        flex-direction: column; /* Organiza el SVG y el texto en columnas */
+        align-items: center; /* Centra el contenido de cada botón */
+        justify-content: center; /* Centra el contenido verticalmente */
+        border: none; /* Opcional: sin borde */
+        background: none; /* Opcional: sin fondo */
+        padding: 5px 10px; /* Padding dentro de cada botón */
+        cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+        span {
+            display: none;
+        }
+    }
+
+    svg {
+        margin-bottom: 5px;
+    }
+}

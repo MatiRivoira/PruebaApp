@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pruebaapp-5ca51": {
+      "hosting": {
+        "app": [
+          "pruebaapp-5ca51"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pruebaapp-5ca51"
+  }
+}
